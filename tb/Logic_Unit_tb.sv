@@ -18,6 +18,9 @@ module Logic_Unit_tb_sv ;
 
     //stimulus block:
     initial begin
+
+        $dumpfile("logic_unit_waves.vcd");
+        $dumpvars(0, Logic_Unit_tb_sv);
         //system reset:
         a = 8'b0;
         b = 8'b0;

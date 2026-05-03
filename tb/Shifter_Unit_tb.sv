@@ -18,6 +18,10 @@ module Shifter_Unit_tb_sv;
 
     //stimulus block:
     initial begin
+
+        $dumpfile("shifter_waves.vcd");
+        $dumpvars(0, Shifter_Unit_tb_sv);
+        
         //system reset:
         a = 8'b0;
         direction = 1'b0;

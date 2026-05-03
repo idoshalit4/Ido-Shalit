@@ -31,6 +31,10 @@ module ALU_tb_sv;
 
     // stimulus block:
     initial begin
+
+        $dumpfile("alu_waves.vcd"); 
+        $dumpvars(0, ALU_tb_sv);
+
         // system reset:
         a = 8'b0;
         b = 8'b0;

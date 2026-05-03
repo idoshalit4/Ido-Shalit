@@ -24,6 +24,10 @@ module Full_Adder_8bits_tb_sv;
 
     // stimulus block:
     initial begin
+
+        $dumpfile("full_adder_waves.vcd");
+        $dumpvars(0, Full_Adder_8bits_tb_sv);
+
         // system reset:
         a = 8'b0;
         b = 8'b0;
@@ -94,11 +98,11 @@ module Full_Adder_8bits_tb_sv;
             #10;
             
             // Calculate expected 9-bit result using exact 2's complement hardware logic
-            expected_result = a + (~b) + 1;
+            expected_result = (a-b);
             
-            if ((sum !== expected_result[7:0]) || (cout !== expected_result[8])) begin
+            if ((sum !== expected_result[7:0]) || (cout !== ~(expected_result[8]))) begin
                 $display("ERROR at SUB: a = %b, b = %b | Expected sum = %b, cout = %b | Got sum = %b, cout = %b", 
-                         a, b, expected_result[7:0], expected_result[8], sum, cout);
+                         a, b, expected_result[7:0], ~(expected_result[8]), sum, cout);
             end
         end
         //End Of Simulation
