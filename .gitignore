@@ -1,0 +1,3 @@
+# Ignore Simulation Artifacts
+sim/alu_sim
+sim/*.vcd
