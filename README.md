@@ -7,7 +7,7 @@ This project features a complete hierarchical design and verification of an 8-bi
 ## 1. Logic Design (Architecture)
 The system was initially architected using Logisim to ensure correct data paths and a modular hierarchy. Below is the top-level design, built from smaller sub-components (Full Adders, Logic Units, Shifters, etc.).
 
-![ALU Top Level](LOGISIM_IMAGES/ALU.LOGISIM.png)
+![ALU Top Level](schematics/ALU.LOGISIM.png)
 
 *(Note: The project includes detailed structural designs for `FULL_ADDER_8BITS`, `LEFT_SHIFTER`, `LOGIC_UNIT`, and more, which can be found in the LOGISIM_IMAGES directory).*
 
@@ -23,7 +23,7 @@ The modules implement the following hierarchy:
 Extensive unit testing was performed using **Icarus Verilog** and **GTKWave**. Each module was tested individually to ensure correct carry propagation, logic operations, and flag generation before the top-level integration.
 
 ### ALU Top-Level Simulation
-![ALU Waves](WAVES_IMAGES/ALU_waves.png)
+![ALU Waves](waveforms/ALU_waves.png)
 
 ### Arithmetic Unit Verification
 ![Arithmetic Unit Waves](WAVES_IMAGES/Arithmetic_Unit_waves.png)
