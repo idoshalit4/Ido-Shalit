@@ -107,7 +107,7 @@ module ALU_tb_sv;
                     exp_carry = calc_temp[8];
                 end
 
-                3'b001: begin // Substraction
+                3'b001: begin // Subtraction
                     calc_temp = (a - b);
                     exp_result = calc_temp[7:0];
                     exp_carry = calc_temp[8];
