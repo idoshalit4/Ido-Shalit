@@ -26,10 +26,10 @@ Extensive unit testing was performed using **Icarus Verilog** and **GTKWave**. E
 ![ALU Waves](waveforms/ALU_waves.png)
 
 ### Arithmetic Unit Verification
-![Arithmetic Unit Waves](WAVES_IMAGES/Arithmetic_Unit_waves.png)
+![Arithmetic Unit Waves](waveforms/Arithmetic_Unit_waves.png)
 
 ### Shifter Unit Verification
-![Shifter Waves](WAVES_IMAGES/Shifter_Unit_waves.png)
+![Shifter Waves](waveforms/Shifter_Unit_waves.png)
 
 ### Logic Unit Verification
-![Logic Unit Waves](WAVES_IMAGES/Logic_Unit_waves.png)
+![Logic Unit Waves](waveforms/Logic_Unit_waves.png)
