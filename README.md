@@ -20,6 +20,10 @@ The modules implement the following hierarchy:
 * **Top-Level ALU** (Integrating all units with an OpCode selector)
 
 ## 3. Verification & Simulation
+To ensure absolute hardware robustness, verification went beyond basic functional checks. I developed a **self-checking SystemVerilog testbench** designed for automated testing, running a loop of 500 randomized test vectors to validate operations across all modules. 
+
+However, since randomized testing can easily miss critical boundary conditions, I deliberately implemented **manual, directed edge-case tests**. These targeted scenarios force extreme hardware states—such as maximum value overflows and zero-result evaluations—to guarantee that the Carry and Zero status flags behave perfectly under pressure.
+
 Extensive unit testing was performed using **Icarus Verilog** and **GTKWave**. Each module was tested individually to ensure correct carry propagation, logic operations, and flag generation before the top-level integration.
 
 ### ALU Top-Level Simulation
